@@ -1,0 +1,15 @@
+{
+  "name": "express101",
+  "version": "1.0.0",
+  "description": "Studies about express module",
+  "type": "module",
+  "main": "expressServer.js",
+  "scripts": {
+    "start": "nodemon expressRouting.js"
+  },
+  "author": "mateus-lazarus",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

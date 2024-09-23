@@ -1,0 +1,15 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+  const ourRequest = $.ajax({
+    method: "POST",
+    url: "http://localhost:5000/ajax",
+    dataType: "json",
+    data: {name: "John", location: "Boston"}
+  });
+
+  ourRequest.then((response, statusCode, xmlhttpp) => {
+    console.log(response);
+    console.log(xmlhttpp);
+  });
+</script>

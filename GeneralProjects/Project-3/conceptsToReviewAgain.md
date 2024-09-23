@@ -1,0 +1,16 @@
+# Review the concepts:
+- Reverse Proxy
+  - Apache
+  - Nginx
+  - IIS (Visual Studio / Microsoft)
+- All layers from a http request
+  - OS : Operation System Layer
+  - WS - Web Server Layer
+  - DB - Database Layer
+  - PL - Programming Layer (C, C++, C#, Java, Python, ...)
+  - F.E UI - Final Experience User Interface:
+    - Reacted
+    - Google engine V68
+- 
+- What is the Server-Side Rendering
+-

@@ -18,9 +18,9 @@ app.use(express.urlencoded({ extended: false }));
 // For more documentation on view engines, visit https://expressjs.com/en/guide/using-template-engines.html
 // And we going to have to call the view engine we want to use in the app.set() method
 
-// app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');
 // app.set('view engine', 'hbs');
-app.set('view engine', 'pug');
+// app.set('view engine', 'pug');
 
 // The views directory is the default directory that express looks for views
 // The view directory by default has the path './views' of the root directory

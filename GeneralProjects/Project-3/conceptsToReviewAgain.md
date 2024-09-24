@@ -12,5 +12,6 @@
     - Reacted
     - Google engine V68
 - 
-- What is the Server-Side Rendering
--
+- What is the Server-Side Rendering (Check!!)
+- The CORS problem
+- 

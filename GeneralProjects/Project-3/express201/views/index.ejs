@@ -1,62 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 10px 0;
-      text-align: center;
-    }
-    .container {
-      width: 80%;
-      margin: auto;
-      overflow: hidden;
-    }
-    #main {
-      padding: 20px;
-      background: #fff;
-      margin-top: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-    h1 {
-      color: #333;
-    }
-    p {
-      line-height: 1.6;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1>Welcome to My Home Page</h1>
-    </div>
-  </header>
-  <div class="container" id="main">
-    <h1>About Us</h1>
-    <p>This is a simple home page created using EJS and some embedded CSS. It is designed to be clean and minimalistic, providing a pleasant user experience.</p>
-  </div>
-  <footer>
-    <p>Copyright &copy; 2023 My Website</p>
-  </footer>
-</body>
-</html>
+<h2>Is it all validate:<%= validated %></h2>
+<h1><%= userName %></h1>
+
+<% for(let i = 0; i < 10; i++) { %>
+  <li><%= i %></li>
+<% } %>
+
+
+<h1>Odd or Even?</h1>
+<% for(let i = 0; i < 10; i++) { %>
+  <% if (i % 2 === 0) { txt = "even" } else { txt = "odd" } %>
+  <li><%= i %> - <%= txt %></li>
+<% } %>
+
+
+<br /><br />
+<!-- `<`% Means I want to run some JavaScript code 
+`<`%`= Means I want to output the result of the code -->
+
+This receive from the data object passed by the res.locals that is read from default by EJS <br />
+<h1><%= msg %></h1> <!-- This receive from the data object passed by the res.locals that is read from default by EJS -->
+<h2><%= msg2 %></h2>
+
+<br /><br />
+Wrong way to evaluate an html to page
+<%= imageHtml %>
+<br />
+Right way to evaluate an html to page
+<%- imageHtml %>
+
+
+<br /><br />
+<!-- <%# This is a comment %> -->
+{ /* This is a comment 2 */ }

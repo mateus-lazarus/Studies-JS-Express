@@ -1,1 +1,70 @@
+For more documentation on Handlebars, visit: http://handlebarsjs.com/
+
+<br />
+
 <h1>Basic HBS</h1>
+
+<p>Your amazing message in handlebars { } are : {{msg}} , {{msg2}}</p>
+<p>Maybe you are authenticated? {{validated}}</p>
+
+<br />
+<br />
+<br />
+
+It will not be interpreted / evaluated html just using { { just some code } }
+<br />
+But it will be interpreted / evaluated html using { { { some html } } }
+
+<br />
+<br />
+<br />
+
+Image way 1
+{{imageHTML}}
+<br />
+Image way 2
+{{{imageHTML}}}
+
+<br />
+<br />
+<br />
+
+
+Now printing an object inside the local.objects? <br />
+{{country}} <br />
+
+Now printing field to field
+Capital: {{country.capital}} <br />
+Name: {{country.name}} <br /><br />
+
+
+
+There are some other ways to print objects, like this: <br />
+
+And these others way to print something are called "helpers"
+<br />
+Like #with, #each, #if, #unless
+<br /> <br />
+
+And comments with handlers are defined by: { {!--   --} }
+
+
+
+<br />
+<br />
+
+Let's use the #each helper to print all the countries in the object
+{{#each cities}}
+    <p>Country: {{cities}} - Capital: {{cities.capital}}</p>
+{{/each}}
+
+
+
+<br />
+
+Let's use the #if helper to print a message if the country is Brazil
+{{#if country.name}}
+    <p>Country is Brazil</p>
+{{else}}
+    <p>Country is not Brazil</p>
+{{/if}}

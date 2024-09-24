@@ -9,7 +9,7 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.set('view engine', 'ejs');
+app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));  // We could also pass an array of paths
 
 // Ejs tags are these:
@@ -41,8 +41,18 @@ app.get('/', (req, res) => {
     msg: "Success!",
     msg2: "Success again!",
     imageHtml: "<img src='./public/images/node-created-path.png' />",
+    country: {
+      name: "Switzerland",
+      capital: "Zurique"
+    },
+    cities: [
+      { name: "Zurique" },
+      { name: "Geneva" },
+      { name: "Bern" },
+      { name: "Lausanne" }
+    ]
   });
-}, {});
+});
 
 
 app.listen(5000);

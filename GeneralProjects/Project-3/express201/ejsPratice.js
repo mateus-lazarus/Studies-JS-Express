@@ -9,7 +9,7 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.set('view engine', 'hbs');
+app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));  // We could also pass an array of paths
 
 // Ejs tags are these:
@@ -50,7 +50,9 @@ app.get('/', (req, res) => {
       { name: "Geneva" },
       { name: "Bern" },
       { name: "Lausanne" }
-    ]
+    ],
+    title : "Home",
+    message: "Hello World"
   });
 });
 

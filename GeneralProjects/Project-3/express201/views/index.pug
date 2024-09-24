@@ -1,1 +1,50 @@
-h1 Welcome Home, Stranger Pug!
+
+
+doctype html
+html
+  head
+    title= title
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+  body
+    h3 
+      For more documentation on Pug Jade visit the link below
+      br
+      a(href='https://pugjs.org/api/getting-started.html') Pug Jade Documentation
+
+    br
+    br
+    
+    h1= message
+    p Welcome to #{title}
+
+    h1.ClassType#IdType Welcome Home, Stranger Pug!
+
+    h1 Indentation is a must with Pug Jade
+
+    div.container
+      div.flex-container
+        p Container 1
+      div.flex-container
+        p Container 2
+      div.flex-container
+        p Show me javascript variables by the "# { }" syntax
+        p Much like that: #{message}
+      div.flex-container
+        p To evaluate a html code it is necessary to use "! { }" instead o #
+        p Much like that: !{imageHTML}
+  
+    div.container 
+      div.flex-container
+        p This is a simple example of a loop in Pug
+        each val in cities
+          li= val.name + ' - ' + country.name
+      div.flex-container
+        p
+          | Using a conditional in Pug validating if the 
+          strong country 
+          | variable is "Brazil"
+        if country.name === 'Brazil'
+          p This is a simple example of a conditional in Pug
+        else
+          p This is a simple example of a conditional in Pug, but it is not true. Sorry it's not Brazil. It is : #{country.name}
